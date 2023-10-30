@@ -28,4 +28,6 @@ const postUser = async (req, res) => {
     }
   };
   
-  module.exports = postUser;
+  module.exports = {
+    postUser
+  };
