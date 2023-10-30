@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
-module.exports = (database) => {
-  database.define("Products", {
+module.exports = (dataBase) => {
+  dataBase.define("Products", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -12,11 +12,7 @@ module.exports = (database) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    imageSrc:{
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    imageAlt:{
+    imageurl:{
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -27,6 +23,10 @@ module.exports = (database) => {
     description:{
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    countInStock: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
 };
