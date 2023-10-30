@@ -24,6 +24,7 @@ User(dataBase)
 
 const { products, users } = dataBase.models
 
+
 module.exports = {
     connectDB,
     products,
