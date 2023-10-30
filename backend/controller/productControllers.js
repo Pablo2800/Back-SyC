@@ -3,7 +3,7 @@ const { products } = require('../config/db')
 
 const getAllProducts = async (req, res) => {
     try {
-        const product = await products.find({})
+        const product = await products.findAll({})
 
         res.status(200).json(product)
     } catch (error) {
@@ -17,7 +17,7 @@ const getProductById = async (req, res) => {
 
         res.status(200).json(productId)
     } catch (error) {
-        res.status(500).json({error: "Error al obtener todos los productos"})
+        res.status(500).json({error: "Error al obtener todos los productos por id"})
     }
 }
 
