@@ -2,83 +2,93 @@ const products = [
   {
     id: 1,
     name: "Café Espresso",
-    imageUrl: "https://example.com/espresso.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/04/26/16/58/coffe-1354786_640.jpg",
     price: 3.99,
     description: "Café Espresso premium con sabor intenso.",
-    countInStock: 100
+    countInStock: 100,
   },
   {
     id: 2,
     name: "Café Latte",
-    imageUrl: "https://example.com/latte.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2019/07/13/11/44/coffee-4334647_1280.jpg",
     price: 4.49,
     description: "Café Latte suave con espuma de leche.",
-    countInStock: 80
+    countInStock: 80,
   },
   {
     id: 3,
     name: "Café Mocha",
-    imageUrl: "https://example.com/mocha.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/17/14/37/coffee-5495609_640.jpg",
     price: 4.99,
     description: "Café Mocha con chocolate y crema batida.",
-    countInStock: 60
+    countInStock: 60,
   },
   {
     id: 4,
     name: "Café Americano",
-    imageUrl: "https://example.com/americano.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/11/29/02/10/caffeine-1866758_640.jpg",
     price: 3.49,
     description: "Café Americano suave y refrescante.",
-    countInStock: 120
+    countInStock: 120,
   },
   {
     id: 5,
     name: "Café Cappuccino",
-    imageUrl: "https://example.com/cappuccino.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/11/29/12/45/beverage-1869598_640.jpg",
     price: 4.79,
     description: "Café Cappuccino con cacao en polvo y leche vaporizada.",
-    countInStock: 90
+    countInStock: 90,
   },
   {
     id: 6,
     name: "Café Macchiato",
-    imageUrl: "https://example.com/macchiato.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/11/29/04/31/caffeine-1867326_640.jpg",
     price: 4.29,
     description: "Café Macchiato con una pizca de leche.",
-    countInStock: 70
+    countInStock: 70,
   },
   {
     id: 7,
     name: "Café Cortado",
-    imageUrl: "https://example.com/cortado.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/08/03/05/33/latte-1565931_640.jpg",
     price: 4.59,
     description: "Café Cortado con leche caliente.",
-    countInStock: 80
+    countInStock: 80,
   },
   {
     id: 8,
     name: "Café Irlandés",
-    imageUrl: "https://example.com/irlandes.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2015/09/09/17/42/coffee-932103_640.jpg",
     price: 5.99,
     description: "Café Irlandés con whiskey y crema batida.",
-    countInStock: 50
+    countInStock: 50,
   },
   {
     id: 9,
     name: "Café Vienés",
-    imageUrl: "https://example.com/vienes.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2019/04/27/00/44/coffee-4159024_640.jpg",
     price: 5.49,
     description: "Café Vienés con nata montada y cacao.",
-    countInStock: 65
+    countInStock: 65,
   },
   {
     id: 10,
     name: "Café Ristretto",
-    imageUrl: "https://example.com/ristretto.jpg",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/11/29/10/09/caffeine-1868926_640.jpg",
     price: 4.69,
     description: "Café Ristretto con un toque de intensidad.",
-    countInStock: 85
-  }
-  ];
-  
-  module.exports = products;
+    countInStock: 85,
+  },
+];
+
+module.exports = products;
