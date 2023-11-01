@@ -23,9 +23,6 @@ module.exports = (dataBase) => {
       unique:true,
       allowNull:false
    },
-   confirmPassword:{
-      type:DataTypes.BOOLEAN,
-   },
    phoneNumber:{
       type:DataTypes.INTEGER,
       allowNull:false

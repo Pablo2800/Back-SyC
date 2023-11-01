@@ -8,7 +8,7 @@ const {
     } = require('../controller/productControllers')
 
 const { login } = require('../controller/LoginController')
-const { postUser } = require('../controller/UserController')
+const { register } = require('../controller/UserController')
 
 
 
@@ -18,6 +18,6 @@ router.get('/products/:id', getProductById)
 
 router.get('/login', login)
 
-router.post('/create' , postUser)
+router.post('/user/create' , register)
 
 module.exports = router
