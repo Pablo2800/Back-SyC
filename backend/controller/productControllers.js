@@ -5,7 +5,7 @@ const { Op } = require('sequelize')
 const getAllProducts = async (req, res) => {
     try {
         const product = await products.findAll({})
-
+        
         res.status(200).json(product)
     } catch (error) {
         res.status(500).json({error: "Error al obtener todos los productos"})
@@ -38,8 +38,10 @@ const getProductByName = async (req, res) => {
         res.status(500).json({ error: 'Error al obtener el nombre'})
     }
 }
+
+
 module.exports = {
     getAllProducts,
     getProductById,
-    getProductByName
+    getProductByName,
 }

@@ -7,6 +7,7 @@ const products = [
     price: 3.99,
     description: "Café Espresso premium con sabor intenso.",
     countInStock: 100,
+    category: "Cafe",
   },
   {
     id: 2,
