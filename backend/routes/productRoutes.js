@@ -3,17 +3,17 @@ const router = express.Router()
 
 const {
     getAllProducts,
-    getProductById
+    getProductById,
+    getProductByName
     } = require('../controller/productControllers')
 
 const { login } = require('../controller/LoginController')
 const { postUser } = require('../controller/UserController')
 
 
-//access. Public
-router.get('/products', getAllProducts)
 
-//access. Public
+router.get('/products/name', getProductByName)
+router.get('/products', getAllProducts)
 router.get('/products/:id', getProductById)
 
 router.get('/login', login)
