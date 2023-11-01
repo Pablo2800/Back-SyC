@@ -17,6 +17,7 @@ const products = [
     price: 4.49,
     description: "Café Latte suave con espuma de leche.",
     countInStock: 80,
+    category: "Cafe",
   },
   {
     id: 3,
@@ -26,6 +27,7 @@ const products = [
     price: 4.99,
     description: "Café Mocha con chocolate y crema batida.",
     countInStock: 60,
+    category: "Cafe",
   },
   {
     id: 4,
@@ -35,6 +37,7 @@ const products = [
     price: 3.49,
     description: "Café Americano suave y refrescante.",
     countInStock: 120,
+    category: "Cafe",
   },
   {
     id: 5,
@@ -44,6 +47,7 @@ const products = [
     price: 4.79,
     description: "Café Cappuccino con cacao en polvo y leche vaporizada.",
     countInStock: 90,
+    category: "Cafe",
   },
   {
     id: 6,
@@ -53,6 +57,7 @@ const products = [
     price: 4.29,
     description: "Café Macchiato con una pizca de leche.",
     countInStock: 70,
+    category: "Cafe",
   },
   {
     id: 7,
@@ -62,6 +67,7 @@ const products = [
     price: 4.59,
     description: "Café Cortado con leche caliente.",
     countInStock: 80,
+    category: "Cafe",
   },
   {
     id: 8,
@@ -71,6 +77,7 @@ const products = [
     price: 5.99,
     description: "Café Irlandés con whiskey y crema batida.",
     countInStock: 50,
+    category: "Cafe",
   },
   {
     id: 9,
@@ -80,6 +87,7 @@ const products = [
     price: 5.49,
     description: "Café Vienés con nata montada y cacao.",
     countInStock: 65,
+    category: "Cafe",
   },
   {
     id: 10,
@@ -89,6 +97,27 @@ const products = [
     price: 4.69,
     description: "Café Ristretto con un toque de intensidad.",
     countInStock: 85,
+    category: "Cafe",
+  },
+  {
+    id: 11,
+    name: "Medialuna de manteca",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/03/27/21/59/bread-1284438_640.jpg",
+    price: 2.49,
+    description: "Medialuna de manteca recien horneada",
+    countInStock: 40,
+    category: "Medialuna",
+  },
+  {
+    id: 12,
+    name: "Medialuna de grasa",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2020/08/28/10/19/croissant-5524176_640.jpg",
+    price: 2.49,
+    description: "Medialuna de grasa recien horneada",
+    countInStock: 20,
+    category: "Medialuna",
   },
 ];
 

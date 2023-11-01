@@ -1,7 +1,9 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require("sequelize");
 
 module.exports = (dataBase) => {
-    dataBase.define('products', {
+  dataBase.define(
+    "products",
+    {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -10,27 +12,29 @@ module.exports = (dataBase) => {
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
-      description: {  
+      description: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       price: {
         type: DataTypes.FLOAT,
-        allowNull: false
+        allowNull: false,
       },
       imageUrl: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       countInStock: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
       },
       category: {
         type: DataTypes.STRING,
-        allowNull: false
-      }
-    }, {timestamps: false})
-}
+        allowNull: false,
+      },
+    },
+    { timestamps: false }
+  );
+};
