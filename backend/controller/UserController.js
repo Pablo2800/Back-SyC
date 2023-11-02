@@ -1,61 +1,66 @@
-const {users} = require('../config/db')
+const { users } = require("../config/db");
 
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
-const secretKey = 'pablitoki'
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const secretKey = "pablitoki";
 
 const register = async (req, res) => {
   try {
-    const { email, password, phoneNumber, name, birthDate } = req.body;
-    err = ""
+    const { email, password, lastName, name, birthDate, confirmPassword } =
+      req.body;
+    err = "";
 
     if (!name) {
-      err += `[name can't be empty] `
+      err += `[name can't be empty] `;
     }
     if (!email) {
-      err += `[email can't be empty] `
+      err += `[email can't be empty] `;
     }
     if (!password) {
-      err += `[password can't be empty] `
+      err += `[password can't be empty] `;
     }
-    if (!phoneNumber ) {
-      err += `[phoneNumber can't be empty] `
+    if (!lastName) {
+      err += `[lastName can't be empty] `;
     }
     if (!birthDate) {
-      err += `[birthDate can't be empty] `
+      err += `[birthDate can't be empty] `;
     }
-    if (err != ""){
-      res.status(400).send(err)
+    if (!confirmPassword) {
+      err += `[confirmPassword can't be empty] `;
+    }
+    if (err != "") {
+      res.status(400).send(err);
     }
 
-    let passCript
+    let passCript;
     if (password.length >= 6) {
-      passCript = bcrypt.hashSync(password, 10)
+      passCript = bcrypt.hashSync(password, 10);
     } else {
-      passCript = password
+      passCript = password;
     }
 
     const user = await users.create({
       name,
       email,
       password: passCript,
-      phoneNumber,
-      birthDate
-    })
+      lastName,
+      birthDate,
+      confirmPassword,
+    });
 
     if (user) {
-      let token = jwt.sign({ user: user}, secretKey, {
-        expiresIn: '7d'
-      })
+      let token = jwt.sign({ user: user }, secretKey, {
+        expiresIn: "7d",
+      });
       res.json({
         user: user,
         token: token,
-      })
+      });
     }
   } catch (error) {
-    res.status(500).json(error.message)
+    res.status(500).json(error.message);
   }
-}
-  module.exports = {
-    register,
-  };
+};
+module.exports = {
+  register,
+};

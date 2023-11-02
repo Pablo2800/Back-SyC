@@ -1,32 +1,35 @@
-const {users} = require('../config/db')
+const { users } = require("../config/db");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const secretKey = "pablitoki";
 
 const login = async (req, res) => {
-    try {
-      const { email, password } = req.query;
-    
-      if (!email || !password) {
-        return res.status(400).json({ message: "Faltan datos" });
-      }
+  try {
+    const { email, password } = req.query;
 
-      const user = await users.findOne({ where: { email } });
-      
-      if (user) {
-        if (bcrypt.compareSync(password, user.password)) {
-          let token = jwt.sign({ user: user }, secretKey, {
-            expiresIn: "7d",
-          });
-          res.json({
-            user: user,
-            token: token,
-          });
-        }
-        if (!bcrypt.compareSync(password, user.password))
-          res.status(401).json({ msg: "Contraseña incorrecta" });
-      }
-    } catch (error) {
-      return res.status(500).json({ message: error.message });
+    if (!email || !password) {
+      return res.status(400).json({ message: "Faltan datos" });
     }
-  };
-  module.exports = {
-    login
-  };
+
+    const user = await users.findOne({ where: { email } });
+
+    if (user) {
+      if (bcrypt.compareSync(password, user.password)) {
+        let token = jwt.sign({ user: user }, secretKey, {
+          expiresIn: "7d",
+        });
+        res.json({
+          user: user,
+          token: token,
+        });
+      }
+      if (!bcrypt.compareSync(password, user.password))
+        res.status(401).json({ msg: "Contraseña incorrecta" });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+module.exports = {
+  login,
+};
